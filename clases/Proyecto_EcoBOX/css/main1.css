@@ -1,0 +1,159 @@
+/* General */
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+
+
+/* Navegacion */
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+    /* Contenedor del menú */
+        nav {
+            background-color: #007BFF;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Estilos para el logo */
+        .logo {
+            width: 8 rem;
+            height: 1.8125rem;
+            flex-shrink: 0; /* Tamaño del logo */
+        }
+
+
+        /* Lista del menú */
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* Estilo de los elementos del menú */
+        .menu li {
+            margin: 0 15px;
+        }
+
+        /* Estilo de los enlaces */
+        .menu li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 16px;
+            display: flex;
+        }
+
+        /* Hover sobre los enlaces */
+        .menu li a:hover {
+          border-radius: 1rem;
+          background: #007BFF33 20%;
+          box-shadow: 2px 2px 2px 2px #333;
+        }
+
+/* Contenedor */
+.container {
+            width: 100%;
+            max-width: 1020px;
+            margin: auto;
+            text-align: center;
+
+}
+
+/* Imagen con texto */
+.image-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+}
+
+.image-wrapper img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+}
+
+.image-text {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 18px;
+}
+
+/* Rectángulo */
+.yellow-box {
+            width: 100%;
+            background-color: #FFC107;
+            color: black;
+            margin-top: 5px;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 8px;
+}
+
+.yellow-box p {
+            margin: 0;
+            font-size: 18px;
+}
+
+.yellow-box button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+}
+
+.yellow-box button:hover {
+            background-color: #555;
+}
+
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .image-text {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .yellow-box p {
+        font-size: 14px;
+    }
+
+    .yellow-box button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .yellow-box {
+        padding: 10px;
+    }
+}

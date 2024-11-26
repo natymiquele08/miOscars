@@ -1,0 +1,628 @@
+/* General */
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        border-color: black;
+}
+
+
+
+/* Navegacion */
+
+header {
+    padding: 10px 20px;
+    background-color: #007BFF;
+}
+
+nav {
+      background-color: #007BFF;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+        }
+
+.logo {
+    width: 8 rem;
+    height: 1.8125rem;
+    flex-shrink: 0; /* Tamaño del logo */
+}
+
+/* Estilos del menú de navegación */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ /* Estilo de los elementos del menú */
+        .menu li {
+            margin: 0 15px;
+        }
+
+        /* Estilo de los enlaces */
+        .menu li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 16px;
+            display: flex;
+        }
+
+        /* Hover sobre los enlaces */
+        .menu li a:hover {
+          border-radius: 1rem;
+          background: #007BFF33 20%;
+          box-shadow: 2px 2px 2px 2px #333;
+        }
+
+/* Estilos para el menú hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    align-content: right;
+}
+
+.hamburger div {
+    width: 24px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Mostrar menú cuando el checkbox está activo */
+#menu-toggle:checked + .menu {
+    display: flex;
+}
+
+
+/* Contenedor */
+.container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+
+}
+
+/* Imagen con texto */
+.image-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+}
+
+.image-wrapper img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+}
+
+.image-text {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 18px;
+}
+
+/* Rectángulo */
+.yellow-box {
+            width: 100%;
+            background-color: #FFC107;
+            color: black;
+            margin-top: 5px;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 8px;
+}
+
+.yellow-box p {
+            margin: 0;
+            font-size: 18px;
+}
+
+.yellow-box button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+}
+
+.yellow-box button:hover {
+            background-color: #555;
+}
+
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .image-text {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .yellow-box p {
+        font-size: 14px;
+    }
+
+    .yellow-box button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .yellow-box {
+        padding: 10px;
+    }
+}
+
+
+/*Font*/
+.montserrat-family{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+
+  
+  #tituloCentral {
+      display: flex;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 36px;
+  }
+  
+  
+  
+  
+  #card-planes{
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      margin-top: 40px;
+      
+  }
+  
+  #plan-basico{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 20px;
+      width: 381px;
+      height: 705px;
+      background-color: rgba(255, 193, 7, 0.36);
+  }
+  
+  #plan-familiar{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 20px;
+      width: 381px;
+      height: 705px;
+      background-color: rgba(40, 167, 69, 100);
+  }
+  
+  
+  #plan-premium{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 20px;
+      width: 381px;
+      height: 705px;
+      background-color: rgba(255, 193, 7, 0.36);
+  
+  }
+  
+  #plan-premium, #plan-familiar, #plan-basico{
+      box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
+  }
+  #plan-basico-descr, #plan-familiar-descr, #plan-prem-descr{
+      margin-bottom: 127px;
+      
+  }
+  
+  #plan-familiar-descr p{
+      color: white;
+  }
+  
+  #plan-premium, #plan-basico{   
+      margin-top: 40px;
+  }
+  
+  /*tamano titulo de cada plan*/
+  .titulosTarjetasPrecios{
+      font-size: 28px;
+      font-weight: 600;
+      color: #333333;
+  }
+  
+  
+  .btn-verde{
+      border-radius: 20px;
+      border: none;
+      width: 310px;
+      height: 81px;
+      background-color: rgba(40, 167, 69, 100) ;
+      color: white;
+      font-size: 22px;
+      font-weight: 600;
+  }
+  
+  .btn-amarillo{
+      border-radius: 20px;
+      border: none;
+      width: 310px;
+      height: 81px;
+      background-color: #FCAD38;
+      color: white;
+      font-size: 22px;
+      font-weight: 600;
+  }
+  
+  p{
+      color: #333333;
+  }
+
+
+  /*css eduardo*/
+ 
+ 
+ 
+h2{ font-size: 2.7em;}
+p{ font-size: 1.25em;}
+ 
+ 
+.container-eduardo{
+    max-width: 1400px;
+    margin: auto;
+}
+ 
+ 
+#nuestros-productos{
+    background-color: rgb(136, 253, 81);
+    color: white;
+    text-align: center;
+}
+ 
+#nuestros-productos .container-eduardo{
+    padding: 150px 12px;
+}
+ 
+#nuestros-productos h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+ 
+#nuestros-productos p{
+    display: none;
+}
+ 
+#nuestros-productos .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+ 
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../images/1.jpg");
+ 
+}
+ 
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../images/2.jpg");
+}
+ 
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../images/3.jpg");
+ 
+}
+
+ 
+@media (min-width: 850px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+ 
+ 
+    #nuestros-productos .programas{
+        display: flex;
+        justify-content: center;
+    }
+ 
+    #nuestros-productos p{
+        display: block;
+        margin-bottom: 30px;
+    }
+ 
+    #nuestros-productos h2{
+        font-size: 4em;
+    }
+ 
+ 
+    #nuestros-productos .carta{
+        padding: 50px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+ 
+}
+
+
+/*css Diana*/
+
+.productos{
+    background-color: rgba(0, 123, 255, 0.6);
+    padding: 10px;
+  }
+   
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 36px;
+    color:#333333;
+    font-weight: bold;
+}
+
+    .titulo {
+      padding: 0;
+    }
+   
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 28px;
+    color:#021859;
+    margin-left: 10px;}
+   
+  p {
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    font-size: 18px;
+    color:#475467;
+    margin-left: 10px;}
+   
+  button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    align-items: left;
+    color: #007BFF;
+    margin: 5px;
+  text-decoration: none;}
+   
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+    margin: 100px;}
+   
+  .grid-item {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px}
+   
+    .grid-container {
+    display: grid;
+    grid-template-areas:
+    'grano1 grano2 grano3';
+    grid-gap: 30px;}
+   
+  .grid-item:nth-child(1) {
+    grid-area: grano1;}
+   
+  .grid-item:nth-child(2) {
+    grid-area: grano2;}
+   
+  .grid-item:nth-child(3) {
+    grid-area: grano3;}
+
+
+    /*parte giuliano*/
+    .chat-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 2px 10px rgba(90, 72, 72, 0.1);
+        background-image: url("../images/Duvar\ Kağıtları.jfif");
+    }
+    .chat-header {
+        background-color: #28A745;
+        color: #ffffff;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .chat-header img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    .chat-header .header-left {
+        display: flex;
+        
+        align-items: center;
+    }
+    .chat-header .header-left div {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700; /* Montserrat Bold */
+        font-size: 28px; /* 28px */
+        cursor: pointer;
+    }
+    .chat-header .header-right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        font-size: 30px;
+    }
+    .chat-header .header-right i {
+        font-size: 50px;
+        margin-left: 50px;
+        cursor: pointer;
+    }
+    .chat-messages {
+        flex: 1;
+        padding: 20px;
+        padding-top: 100px;
+        overflow-y: auto;
+        border-radius: 10px;
+    }
+    .chat-message {
+        margin-bottom: 30px; /* Más espacio entre mensajes */
+        display: flex;
+    }
+    .message-content {
+        padding: 15px;
+        border-radius: 8px;
+        display: inline-block;
+        max-width: 70%;
+        font-family: 'Roboto', sans-serif; /* Roboto Regular */
+        font-size: 20px; /* 20px */
+    }
+    .message-content.client {
+        background-color: #28A745;
+        align-self: flex-end;
+        margin-left: auto;
+    }
+    .message-content.company {
+        background-color: #007BFF;
+        color: white;
+    }
+    .header-right{
+        cursor: pointer;
+    }
+    /* Estilos para celular */
+    @media (max-width: 768px) {
+        .chat-container {
+            width: 100%; /* Ancho completo en móviles */
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+        }
+     
+        .chat-header {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+     
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+        }
+     
+        .chat-header h2 {
+            font-size: 22px;
+            text-align: center;
+            margin-top: 10px;
+        }
+     
+        .chat-messages {
+            padding: 15px;
+        }
+     
+        .message {
+            font-size: 16px; /* Ajusta el tamaño de texto en móviles */
+        }
+     
+        /* Ajuste de los mensajes */
+        .message.company, .message.client {
+            max-width: 90%; /* Más espacio para los mensajes en móviles */
+        }
+    }
+     
+    /* Estilos para pantallas grandes */
+    @media (min-width: 1024px) {
+        .chat-container {
+            width: 80%; /* Ajustar a un ancho del 80% para pantallas grandes */
+            max-width: 1440px; /* Limitar el ancho máximo a 1440px */
+            margin: 0 auto; /* Centrar el contenedor */
+        }
+     
+        .chat-header h2 {
+            font-size: 32px; /* Mayor tamaño de fuente en pantallas grandes */
+        }
+     
+        .chat-messages {
+            padding: 25px;
+        }
+     
+        .message {
+            font-size: 18px; /* Ajuste de fuente para pantallas grandes */
+        }
+    }

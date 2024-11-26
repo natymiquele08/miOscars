@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Pruebita curso BIOS</title>
+    <link rel="stylesheet" href="prueba_html.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script src="pruebaJS.js"></script>
+</head>
+<style>
+
+
+
+/*fondo de toda la pagina */
+body {
+  background: rgb(17,35,76);
+background: radial-gradient(circle, rgba(17,35,76,1) 15%, rgb(118, 79, 168) 79%, #49797e 91%);
+    min-height: 100vh;
+    margin: 0;
+    color: white; 
+    font-family: "Poiret One", sans-serif;
+    
+  }
+
+/*div del video de fondo */
+  .video-container {
+    position: relative;
+    top: 0;
+    height: 100vh; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 6%;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1; /* Envía el video detrás del texto */
+    opacity: 0.3;
+    
+}
+
+/*navbar */
+
+
+
+
+/*titulo central */
+.tituloCentral {
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+
+/*peliculas destacadas */
+  .card-img-top {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+  }
+
+  .btn-custom-vermas{
+    background-color:transparent;
+    color: white;
+    border-radius: 25px;
+    border-color: white;
+    padding: 0.5rem 1rem;      
+    font-size: 1.25rem; 
+    width: 137.83px;
+  }
+
+  .btn-custom-vermas:hover{
+    background-color: #54888d;
+  }
+
+  /* Fondo del Modal */
+.modal-content {
+  background-color: white; 
+  color: #4e4061; 
+  
+   
+}
+
+/* Título del Modal */
+.modal-header {
+  border-bottom: none; 
+  background-color: #9A79C6;
+  
+}
+
+.modal-title {
+  color: white; 
+  font-size: 1.5rem;
+}
+
+/* Botones del Modal */
+.modal-footer .btn {
+  background-color: transparent; 
+  color: black;
+  border: 1px solid #4e4061; 
+  border-radius: 5px; 
+  padding: 0.5rem 1rem;
+}
+
+.modal-footer .btn:hover {
+  background-color: rgba(255, 255, 255, 0.2); 
+}
+
+/*div todas las peliculas*/
+
+#todasLasPelis{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Cartas de todas las peliculas*/
+.cardTodasLasPelis{
+  background-color:rgba(66, 64, 64, 0.541); 
+  backdrop-filter: blur(10px); 
+  box-shadow: 0 4px 10px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  width: 400px;
+}
+
+/* tabs modificadas */
+
+#pills-tab{
+  display: flex;
+  gap: 25px;
+}
+
+#pills-tab .nav-link.active {
+  background-color: #9A79C6;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#pills-tab .nav-link{
+  background-color: transparent;
+  font-size: x-large;
+  color: white;
+}
+/* termina tabs modificadas */
+
+
+
+
+.card-body{
+  display: flex;
+  flex-direction: column; 
+  margin-top: 35px; 
+  gap: 34px;
+}
+
+@media (max-width: 768px) {
+
+
+  /* version mobile destacadas */
+  #cartasPelisDestacadas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .estrenosDestacados{
+    width: 100%;
+
+  }
+
+
+  /* version MOBILE todas las pelis */
+  .tabsPelis {
+    display: flex;
+    overflow-x: auto; 
+    gap: 1rem; 
+    padding: 1rem;
+  }
+
+  .cardTodasLasPelis {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+
+  #cartasProximosEstrenos{
+    display: flex;
+    overflow-x: auto; 
+    gap: 1rem; 
+    padding: 1rem;
+  }
+  
+  .proximosEstrenos{
+  flex: 0 0 auto;
+  width: 50%;
+  }
+
+
+}
+
+/*version TABLET todas las pelis */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tabsPelis {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .cardTodasLasPelis {
+    flex: 0 0 auto;
+    width: 80%; 
+  }
+
+  #cartasProximosEstrenos{
+    display: flex;
+    overflow-x: auto; 
+    gap: 1rem; 
+    padding: 1rem;
+  }
+  
+  .proximosEstrenos{
+  flex: 0 0 auto;
+  width: 50%;
+  }
+
+}
+
+/*offcanvas*/
+#offcanvasRight{
+  background-color: rgb(22, 22, 22);
+}
+
+/*div de cartas, destacadas y proximas nominaciones*/
+.proximosEstrenos{
+  width: 300px; 
+  height: 500px; 
+  background-color: rgba(251, 255, 253, 0.1); 
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+#cartasProximosEstrenos{
+  display: flex;
+  gap: 12px;
+}
+
+.estrenosDestacados{
+  width: 300px; 
+  height: 500px; 
+  background-color: rgba(251, 255, 253, 0.1); 
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn-custom-vertrailer{
+  background-color:transparent;
+    color: white;
+    border-radius: 25px;
+    border-color: white;
+    padding: 0.5rem 1rem;      
+    font-size: 1.25rem; 
+    width: 137.83px;
+}
+
+.btn-custom-vertrailer:hover{
+    background-color: #73549b;
+  }
+
+ 
+
+
+
+
+</style>
+
+
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark" style=" background-color: #54888d;">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Features</a>
+          <a class="nav-item nav-link" href="#">Pricing</a>
+          <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        </div>
+      </div>
+    </nav>
+      
+    
+    <!--inicio-->
+    <div class="video-container">
+      <video autoplay preload="auto" muted loop class="background-video">
+          <source src="96th Oscars _ Presenting the Best Picture Nominees.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+      </video>
+      <div class="tituloCentral">
+          <h1 class="titulo" style="font-size: 80px;">Desde los Oscar hasta tu casa</h1>
+          <h3>Encuentra las ultimas peliculas nominadas al Oscar y descubre en que plataformas puedes mirarlas</h3>
+          
+            <div class="container" id="botonesInicio">
+              <button class="btn-destacadas"> Estrenos destacados</button>
+              <button class="btn-todas">Catalogo completo</button>
+            </div> 
+            
+        </div>
+          
+      </div>
+  </div>
+            
+        <!--CARTAS-->
+        <br>
+        <br>
+        <h1 class="text-center mb-5" style="font-size: 60px;">Estrenos destacados</h1>
+        <br>
+        <br>
+            <div class="container destacadas" id="cartasPelisDestacadas">
+              <!--CARTA 1-->
+              <div class="card estrenosDestacados">
+                <img src="aliens-alien-movie-sigourney-weaver-ellen-ripley-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                <div class="card-body" style="display: flex; flex-direction: column; margin-top: 35px; gap: 34px;">
+                  <h2 class="card-title">Alien</h2>
+                  <button type="button" class="btn btn-custom-vermas" data-bs-toggle="modal" data-bs-target="#alienModal">
+                    Ver mas  <i class="bi bi-plus"></i>
+                    </button>
+                </div>
+              </div>
+                  <!-- modal -->
+                  
+                  <div class="modal fade" id="alienModal" tabindex="-1" aria-labelledby="alienModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h2 class="modal-title"  id="alienModal">Alien</h2>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p class="textoModalBody">La tripulación del remolcador espacial Nostromo atiende una señal de socorro y, sin saberlo, sube a bordo una letal forma de vida extraterrestre.</p>
+                          <hr>
+                          
+                          <a href="https://www.netflix.com/uy/" class="svg-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 2h4l2.94 8.83L13.5 2h4v20c-1.25-.22-2.63-.36-4.09-.42L10.5 13l-.07 8.59c-1.4.06-2.73.2-3.93.41z"/></svg>
+                        </a>
+                          <a href="https://play.max.com/" class="svg-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="currentColor" d="M22 9.54h-1.706A12 12 0 0 1 18.9 11.3a11 11 0 0 1-1.395-1.76h-1.724a17 17 0 0 0 2.036 2.56a22 22 0 0 0-2.036 2.633h1.724a11.4 11.4 0 0 1 1.395-1.815a11.7 11.7 0 0 1 1.36 1.819H22a21 21 0 0 0-2.027-2.637A20 20 0 0 0 22 9.54m-7.83.685a2.2 2.2 0 0 0-1.776-.825a2.677 2.677 0 0 0-2.6 2.737a2.68 2.68 0 0 0 2.6 2.737a2.21 2.21 0 0 0 1.776-.823v.684h1.36V9.54h-1.36zm-1.56 3.447a1.533 1.533 0 1 1 1.533-1.533a1.53 1.53 0 0 1-1.533 1.533M8.184 9.4a3.03 3.03 0 0 0-1.828.779a1.23 1.23 0 0 0-1.2-.779a3 3 0 0 0-1.81.788V9.54H2v5.2h1.429v-3.234c.624-.493.91-.649 1.144-.649c.277 0 .459.173.459.606v3.274h1.429V11.5c.623-.485.9-.641 1.143-.641c.277 0 .459.173.459.606v3.274h1.429v-3.778c0-1.17-.667-1.561-1.308-1.561m4.426 1.552a1.187 1.187 0 1 0 1.178 1.187a1.18 1.18 0 0 0-1.178-1.187"/></svg>
+                        </a>
+                          <a href="https://www.disneyplus.com/home" class="svg-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="currentColor" d="M5.76 2A3.76 3.76 0 0 0 2 5.76v12.48A3.76 3.76 0 0 0 5.76 22h12.48A3.76 3.76 0 0 0 22 18.24V5.76A3.76 3.76 0 0 0 18.24 2zm11.734 3.164c.168.043.334.115.393.254c-.17.501-.159 1.048-.184 1.553c.25.01.496.023.906.023c.204 0 .44 0 .702-.008c.13.029.146.22.189.315a.8.8 0 0 1-.13.176h-1.683c-.007.217-.017.393-.017.72q-.002.308.006.701c-.029.132-.218.146-.313.19a.8.8 0 0 1-.175-.131V7.473c-.119-.002-.211-.005-.372-.004c-.154 0-.329 0-.54.008c-.132 0-.255-.023-.547-.104a.24.24 0 0 1-.155-.203c.044-.168.118-.336.256-.395c.437.148.908.142 1.357.16c.003-.155.008-.3.008-.53c0-.154 0-.329-.008-.54c0-.132.02-.257.102-.549a.24.24 0 0 1 .205-.152m-9.96 1.637a11.5 11.5 0 0 1 3.802.562q1.214.376 2.357.926a18 18 0 0 1 1.715.969c.14.092.95.695 1.078.787c.26.215.607.518.858.77a7.5 7.5 0 0 1 1.367 1.789c.07.14.125.278.22.437q.114.228.184.47c.024.093.05.233.059.245c.046 0 .102.287.09.398a4 4 0 0 1-.057.797l.016-.023a3 3 0 0 1-.159.537a7 7 0 0 1-.277.55a4.7 4.7 0 0 1-.78.962a6.6 6.6 0 0 1-3.314 1.302a8.5 8.5 0 0 1-2.498-.068a18 18 0 0 1-.697-.148v.287a1 1 0 0 1-.068.242a.41.41 0 0 1-.297.215a.84.84 0 0 1-.51-.024a.74.74 0 0 1-.4-.633c-.035-.23-.077-.615-.077-.615l-.37-.18a9.3 9.3 0 0 1-1.391-.845a17 17 0 0 1-.717-.6a4 4 0 0 1-.79-.94a.9.9 0 0 1-.093-.847a2.3 2.3 0 0 1 1.195-.906a9 9 0 0 1 1.653-.502a7 7 0 0 0 .498-.088l.015-.016a5 5 0 0 0 .016-.59c0-.152.117-1.138.15-1.353c.032-.229.095-.454.19-.666a.175.175 0 0 1 .23-.018c.464.287.59 1.261.625 1.756c.017.3.036.764.036.764s.52-.019.841 0q.494.024.98.1c.585.082 1.156.24 1.7.466c.381.176.686.481.857.864a.9.9 0 0 1-.07.824a1.13 1.13 0 0 1-.879.578a1.4 1.4 0 0 1-.627-.139a.1.1 0 0 1 0-.144c0-.018.2-.116.301-.174a.4.4 0 0 0 .139-.106c.09-.079.178-.161.17-.267c-.012-.104-.158-.215-.29-.268a10.6 10.6 0 0 0-3.083-.52l.07 3.362s.278.051.498.086c.13.016.668.07.807.07a7.55 7.55 0 0 0 3.306-.533a3.3 3.3 0 0 0 1.145-.814a2.34 2.34 0 0 0 .556-1.748a4.5 4.5 0 0 0-.974-2.077a11.5 11.5 0 0 0-4.51-3.158a14.3 14.3 0 0 0-5.012-1.123a8 8 0 0 0-1.922.149c-.069.015-.141.041-.21.06a.33.33 0 0 0-.157.07l-.025.022l.059.023c.05.03.279.039.39.065a.36.36 0 0 1 .254.15a.16.16 0 0 1 0 .192c-.115.139-.54.115-.719.088c-.185-.023-.438-.09-.482-.264a.78.78 0 0 1 .15-.568a1.4 1.4 0 0 1 .926-.668A9.4 9.4 0 0 1 7.533 6.8zm2.607 6.935s-.493.034-.838.067a9.3 9.3 0 0 0-1.73.353c-.14.05-.431.176-.45.323a.49.49 0 0 0 .172.388c.06.07.4.397.494.475c.557.44 1.167.809 1.815 1.1c.208.085.546.206.546.206s-.019-.97-.01-1.92z"/></svg>
+                        </a>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+              
+
+              <!--CARTA 2-->
+
+              <div class="card estrenosDestacados" >
+                <img src="Margot-Robbie-In-Barbie-Movie-Pink-Dress-Pink-Car-4K-Ultra-HD-Mobile-Wallpaper-scaled.jpg" class="card-img-top" alt="...">
+                <div class="card-body" style="display: flex; flex-direction: column; margin-top: 35px; gap: 34px;">
+                  <h2 class="card-title">Barbie</h2>
+                  <button type="button" class="btn btn-custom-vermas" data-bs-toggle="modal" data-bs-target="#barbieModal">
+                    Ver mas 
+<i class="bi bi-plus"></i>                    </button>
+                </div>
+              </div>
+                  <!--  modal -->
+                  
+                  <!-- Modal Barbie-->
+                  <div class="modal fade" id="barbieModal" tabindex="-1" aria-labelledby="barbieModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h2 class="modal-title" id="barbieModal">Barbie</h2>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p class="textoModalBody">Después de ser expulsada de Barbieland por no ser una muñeca de aspecto perfecto, Barbie parte hacia el mundo humano para encontrar la verdadera felicidad.</p>
+                          <hr>
+                          <a href="https://www.netflix.com/uy/" class="svg-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 2h4l2.94 8.83L13.5 2h4v20c-1.25-.22-2.63-.36-4.09-.42L10.5 13l-.07 8.59c-1.4.06-2.73.2-3.93.41z"/></svg>
+                        </a>
+                          <a href="https://play.max.com/" class="svg-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="currentColor" d="M22 9.54h-1.706A12 12 0 0 1 18.9 11.3a11 11 0 0 1-1.395-1.76h-1.724a17 17 0 0 0 2.036 2.56a22 22 0 0 0-2.036 2.633h1.724a11.4 11.4 0 0 1 1.395-1.815a11.7 11.7 0 0 1 1.36 1.819H22a21 21 0 0 0-2.027-2.637A20 20 0 0 0 22 9.54m-7.83.685a2.2 2.2 0 0 0-1.776-.825a2.677 2.677 0 0 0-2.6 2.737a2.68 2.68 0 0 0 2.6 2.737a2.21 2.21 0 0 0 1.776-.823v.684h1.36V9.54h-1.36zm-1.56 3.447a1.533 1.533 0 1 1 1.533-1.533a1.53 1.53 0 0 1-1.533 1.533M8.184 9.4a3.03 3.03 0 0 0-1.828.779a1.23 1.23 0 0 0-1.2-.779a3 3 0 0 0-1.81.788V9.54H2v5.2h1.429v-3.234c.624-.493.91-.649 1.144-.649c.277 0 .459.173.459.606v3.274h1.429V11.5c.623-.485.9-.641 1.143-.641c.277 0 .459.173.459.606v3.274h1.429v-3.778c0-1.17-.667-1.561-1.308-1.561m4.426 1.552a1.187 1.187 0 1 0 1.178 1.187a1.18 1.18 0 0 0-1.178-1.187"/></svg>
+                        </a>
+                          
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+
+              <!--CARTA 3-->
+              <div class="card estrenosDestacados">
+                <img src="oppenheimer_fan_made_poster_by_artguy916_dfuuaml-fullview.jpg" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <h2 class="card-title">Oppenheimer</h2>
+                  <button type="button" class="btn btn-custom-vermas" data-bs-toggle="modal" data-bs-target="#openModal">
+                    Ver mas 
+<i class="bi bi-plus"></i>                    </button>
+                </div>
+              </div>
+                  <!-- modal -->
+                  
+                  <!-- Modal Oppen-->
+                  <div class="modal fade" id="openModal" tabindex="-1" aria-labelledby="openModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h2 class="modal-title" id="openModal">Oppenheimer</h2>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body"  >
+                          <p class="textoModalBody">Durante la Segunda Guerra Mundial, el teniente general Leslie Groves designa al físico J. Robert Oppenheimer para un grupo de trabajo que está desarrollando el Proyecto Manhattan, cuyo objetivo consiste en fabricar la primera bomba atómica.</p>
+                          <hr>
+                          <a href="https://www.netflix.com/uy/" class="svg-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 2h4l2.94 8.83L13.5 2h4v20c-1.25-.22-2.63-.36-4.09-.42L10.5 13l-.07 8.59c-1.4.06-2.73.2-3.93.41z"/></svg>
+                        </a>
+                        <a href="https://www.disneyplus.com/home" class="svg-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="currentColor" d="M5.76 2A3.76 3.76 0 0 0 2 5.76v12.48A3.76 3.76 0 0 0 5.76 22h12.48A3.76 3.76 0 0 0 22 18.24V5.76A3.76 3.76 0 0 0 18.24 2zm11.734 3.164c.168.043.334.115.393.254c-.17.501-.159 1.048-.184 1.553c.25.01.496.023.906.023c.204 0 .44 0 .702-.008c.13.029.146.22.189.315a.8.8 0 0 1-.13.176h-1.683c-.007.217-.017.393-.017.72q-.002.308.006.701c-.029.132-.218.146-.313.19a.8.8 0 0 1-.175-.131V7.473c-.119-.002-.211-.005-.372-.004c-.154 0-.329 0-.54.008c-.132 0-.255-.023-.547-.104a.24.24 0 0 1-.155-.203c.044-.168.118-.336.256-.395c.437.148.908.142 1.357.16c.003-.155.008-.3.008-.53c0-.154 0-.329-.008-.54c0-.132.02-.257.102-.549a.24.24 0 0 1 .205-.152m-9.96 1.637a11.5 11.5 0 0 1 3.802.562q1.214.376 2.357.926a18 18 0 0 1 1.715.969c.14.092.95.695 1.078.787c.26.215.607.518.858.77a7.5 7.5 0 0 1 1.367 1.789c.07.14.125.278.22.437q.114.228.184.47c.024.093.05.233.059.245c.046 0 .102.287.09.398a4 4 0 0 1-.057.797l.016-.023a3 3 0 0 1-.159.537a7 7 0 0 1-.277.55a4.7 4.7 0 0 1-.78.962a6.6 6.6 0 0 1-3.314 1.302a8.5 8.5 0 0 1-2.498-.068a18 18 0 0 1-.697-.148v.287a1 1 0 0 1-.068.242a.41.41 0 0 1-.297.215a.84.84 0 0 1-.51-.024a.74.74 0 0 1-.4-.633c-.035-.23-.077-.615-.077-.615l-.37-.18a9.3 9.3 0 0 1-1.391-.845a17 17 0 0 1-.717-.6a4 4 0 0 1-.79-.94a.9.9 0 0 1-.093-.847a2.3 2.3 0 0 1 1.195-.906a9 9 0 0 1 1.653-.502a7 7 0 0 0 .498-.088l.015-.016a5 5 0 0 0 .016-.59c0-.152.117-1.138.15-1.353c.032-.229.095-.454.19-.666a.175.175 0 0 1 .23-.018c.464.287.59 1.261.625 1.756c.017.3.036.764.036.764s.52-.019.841 0q.494.024.98.1c.585.082 1.156.24 1.7.466c.381.176.686.481.857.864a.9.9 0 0 1-.07.824a1.13 1.13 0 0 1-.879.578a1.4 1.4 0 0 1-.627-.139a.1.1 0 0 1 0-.144c0-.018.2-.116.301-.174a.4.4 0 0 0 .139-.106c.09-.079.178-.161.17-.267c-.012-.104-.158-.215-.29-.268a10.6 10.6 0 0 0-3.083-.52l.07 3.362s.278.051.498.086c.13.016.668.07.807.07a7.55 7.55 0 0 0 3.306-.533a3.3 3.3 0 0 0 1.145-.814a2.34 2.34 0 0 0 .556-1.748a4.5 4.5 0 0 0-.974-2.077a11.5 11.5 0 0 0-4.51-3.158a14.3 14.3 0 0 0-5.012-1.123a8 8 0 0 0-1.922.149c-.069.015-.141.041-.21.06a.33.33 0 0 0-.157.07l-.025.022l.059.023c.05.03.279.039.39.065a.36.36 0 0 1 .254.15a.16.16 0 0 1 0 .192c-.115.139-.54.115-.719.088c-.185-.023-.438-.09-.482-.264a.78.78 0 0 1 .15-.568a1.4 1.4 0 0 1 .926-.668A9.4 9.4 0 0 1 7.533 6.8zm2.607 6.935s-.493.034-.838.067a9.3 9.3 0 0 0-1.73.353c-.14.05-.431.176-.45.323a.49.49 0 0 0 .172.388c.06.07.4.397.494.475c.557.44 1.167.809 1.815 1.1c.208.085.546.206.546.206s-.019-.97-.01-1.92z"/></svg>
+                        </a>
+                      </div>
+                        
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+              
+
+                  <!--CARTA 4-->
+              <div class="card estrenosDestacados">
+                <img src="POOR+THINGS+(2023)+Emma+Stone+looking+upward.jpeg" class="card-img-top rounded-top-5" alt="...">
+                <div class="card-body" style="display: flex; flex-direction: column; margin-top: 35px; gap: 34px;">
+                  <h2 class="card-title">Poor Things</h2>
+                  <button type="button" class="btn btn-custom-vermas" data-bs-toggle="modal" data-bs-target="poorModal">
+                    Ver mas 
+<i class="bi bi-plus"></i>                    </button>
+                </div>
+              </div>
+                  <!-- modal -->
+                  
+                  <!-- Modal Oppen-->
+                  <div class="modal fade" id="poorModal" tabindex="-1" aria-labelledby="poorModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h2 class="modal-title" id="poorModal">Poor Things</h2>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body"  >
+                          <p class="textoModalBody">Durante la Segunda Guerra Mundial, el teniente general Leslie Groves designa al físico J. Robert Oppenheimer para un grupo de trabajo que está desarrollando el Proyecto Manhattan, cuyo objetivo consiste en fabricar la primera bomba atómica.</p>
+                          <hr>
+                          <a href="https://www.netflix.com/uy/" class="svg-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 2h4l2.94 8.83L13.5 2h4v20c-1.25-.22-2.63-.36-4.09-.42L10.5 13l-.07 8.59c-1.4.06-2.73.2-3.93.41z"/></svg>
+                        </a>
+                        <a href="https://www.disneyplus.com/home" class="svg-link">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 24 24"><path fill="currentColor" d="M5.76 2A3.76 3.76 0 0 0 2 5.76v12.48A3.76 3.76 0 0 0 5.76 22h12.48A3.76 3.76 0 0 0 22 18.24V5.76A3.76 3.76 0 0 0 18.24 2zm11.734 3.164c.168.043.334.115.393.254c-.17.501-.159 1.048-.184 1.553c.25.01.496.023.906.023c.204 0 .44 0 .702-.008c.13.029.146.22.189.315a.8.8 0 0 1-.13.176h-1.683c-.007.217-.017.393-.017.72q-.002.308.006.701c-.029.132-.218.146-.313.19a.8.8 0 0 1-.175-.131V7.473c-.119-.002-.211-.005-.372-.004c-.154 0-.329 0-.54.008c-.132 0-.255-.023-.547-.104a.24.24 0 0 1-.155-.203c.044-.168.118-.336.256-.395c.437.148.908.142 1.357.16c.003-.155.008-.3.008-.53c0-.154 0-.329-.008-.54c0-.132.02-.257.102-.549a.24.24 0 0 1 .205-.152m-9.96 1.637a11.5 11.5 0 0 1 3.802.562q1.214.376 2.357.926a18 18 0 0 1 1.715.969c.14.092.95.695 1.078.787c.26.215.607.518.858.77a7.5 7.5 0 0 1 1.367 1.789c.07.14.125.278.22.437q.114.228.184.47c.024.093.05.233.059.245c.046 0 .102.287.09.398a4 4 0 0 1-.057.797l.016-.023a3 3 0 0 1-.159.537a7 7 0 0 1-.277.55a4.7 4.7 0 0 1-.78.962a6.6 6.6 0 0 1-3.314 1.302a8.5 8.5 0 0 1-2.498-.068a18 18 0 0 1-.697-.148v.287a1 1 0 0 1-.068.242a.41.41 0 0 1-.297.215a.84.84 0 0 1-.51-.024a.74.74 0 0 1-.4-.633c-.035-.23-.077-.615-.077-.615l-.37-.18a9.3 9.3 0 0 1-1.391-.845a17 17 0 0 1-.717-.6a4 4 0 0 1-.79-.94a.9.9 0 0 1-.093-.847a2.3 2.3 0 0 1 1.195-.906a9 9 0 0 1 1.653-.502a7 7 0 0 0 .498-.088l.015-.016a5 5 0 0 0 .016-.59c0-.152.117-1.138.15-1.353c.032-.229.095-.454.19-.666a.175.175 0 0 1 .23-.018c.464.287.59 1.261.625 1.756c.017.3.036.764.036.764s.52-.019.841 0q.494.024.98.1c.585.082 1.156.24 1.7.466c.381.176.686.481.857.864a.9.9 0 0 1-.07.824a1.13 1.13 0 0 1-.879.578a1.4 1.4 0 0 1-.627-.139a.1.1 0 0 1 0-.144c0-.018.2-.116.301-.174a.4.4 0 0 0 .139-.106c.09-.079.178-.161.17-.267c-.012-.104-.158-.215-.29-.268a10.6 10.6 0 0 0-3.083-.52l.07 3.362s.278.051.498.086c.13.016.668.07.807.07a7.55 7.55 0 0 0 3.306-.533a3.3 3.3 0 0 0 1.145-.814a2.34 2.34 0 0 0 .556-1.748a4.5 4.5 0 0 0-.974-2.077a11.5 11.5 0 0 0-4.51-3.158a14.3 14.3 0 0 0-5.012-1.123a8 8 0 0 0-1.922.149c-.069.015-.141.041-.21.06a.33.33 0 0 0-.157.07l-.025.022l.059.023c.05.03.279.039.39.065a.36.36 0 0 1 .254.15a.16.16 0 0 1 0 .192c-.115.139-.54.115-.719.088c-.185-.023-.438-.09-.482-.264a.78.78 0 0 1 .15-.568a1.4 1.4 0 0 1 .926-.668A9.4 9.4 0 0 1 7.533 6.8zm2.607 6.935s-.493.034-.838.067a9.3 9.3 0 0 0-1.73.353c-.14.05-.431.176-.45.323a.49.49 0 0 0 .172.388c.06.07.4.397.494.475c.557.44 1.167.809 1.815 1.1c.208.085.546.206.546.206s-.019-.97-.01-1.92z"/></svg>
+                        </a>
+                      </div>
+                        
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+
+
+        </div><!--TERMINA CARTAS-->
+        
+            
+            <!--TODAS LAS PELICULAS-->
+            <div class="container" id="todasLasPelis">
+              <h1 style="font-size: 60px;">Todas las peliculas</h1>
+              <!--barra de busqueda-->
+              <div class="container" id="divBarraBusqueda">
+                <input type="text" id="searchBar" placeholder="Buscar película..." onkeyup="searchMovies()">
+              </div>
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">2024</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">2023</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Clasicas</button>
+                </li>
+                
+              </ul>
+              <div class="container" id="pelisEncontradas"></div> <!--DIV PARA PELICULAS ENCONTRADAS EN BUSCADOR-->
+              
+              <!--2024-->
+
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                  <div class="container tabsPelis">
+                    <div class="card cardTodasLasPelis" data-id="vidas-pasadas">
+                      <img src="MCDPALI_EC047_H.webp" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Vidas Pasadas</h5>
+                        <p class="card-text">Greta Lee, Teo Yoo, John Magaro</p>
+                        <button class="btn  btn-canvas btn-custom-vermas " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+
+                      </div>
+                    </div>
+                    <div class="card cardTodasLasPelis" data-id="asesinos-de-luna">
+                      <img src="asesinos.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Asesinos de Luna</h5>
+                        <p class="card-text">Leonardo DiCaprio, Robert De Niro</p>
+                        <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                      </div>
+                    </div>
+
+                    <div class="card cardTodasLasPelis" data-id="maestro">
+                      <img src="maestro.jpeg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Maestro</h5>
+                        <p class="card-text">Bradley Cooper, Carey Mulligan </p>
+                        <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                      </div>
+                    </div>
+                    <div class="card cardTodasLasPelis" data-id="american-fiction">
+                      <img src="american.webp" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">American Fiction</h5>
+                        <p class="card-text">Jeffrey Wright,Tracee Ellis Ross </p>
+                        <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--2023-->
+
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                  <div class="container tabsPelis">
+                  <div class="card cardTodasLasPelis" data-id="elvis">
+                    <img src="elvis.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Elvis</h5>
+                      <p class="card-text">Austin Butler,Tom Hanks</p>
+                      <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                      
+                    </div>
+                  </div>
+                  <div class="card cardTodasLasPelis" data-id="avatar">
+                    <img src="5c1ccacb8730b-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Avatar</h5>
+                      <p class="card-text">Sam Worthington, Zoe Saldaña</p>
+                      <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                    </div>
+                  </div>
+                  <div class="card cardTodasLasPelis" data-id="tar">
+                    <img src="tar.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Tar</h5>
+                      <p class="card-text">Cate Blanchett, Nina Hoss</p>
+                      <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                      
+                    </div>
+                  </div>
+                  <div class="card cardTodasLasPelis" data-id="top-gun">
+                    <img src="topgun.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Top Gun</h5>
+                      <p class="card-text">Tom Cruise,Miles Teller </p>
+                      <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--CLASICAS-->
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+                  <div class="container tabsPelis">
+
+                  <div class="card cardTodasLasPelis" data-id="mary-poppins">
+                    <img src="mary.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Mary Poppins</h5>
+                      <p class="card-text">Julie Andrews, Dick Van Dyke</p>
+                      <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                    </div>
+                  </div>
+                  <div class="card cardTodasLasPelis" data-id="chicago">
+                    <img src="chicago.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Chicago</h5>
+                      <p class="card-text">Renée Zellweger, Richard Gere</p>
+                      <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                    </div>
+                  </div>
+                  <div class="card cardTodasLasPelis" data-id="laformadel-agua">
+                    <img src="formadelagua.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">La forma del agua</h5>
+                      <p class="card-text">Sally Hawkins, Michael Shannon</p>
+                      <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                    </div>
+                  </div>
+                  <div class="card cardTodasLasPelis" data-id="benjamin">
+                    <img src="benjamin.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">El curioso caso de Benjamin Button</h5>
+                      <p class="card-text">Brad Pitt,Cate Blanchetts </p>
+                      <button class="btn  btn-canvas btn-custom-vermas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Ver mas <i class="bi bi-plus"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+
+            </div>
+
+            <!--OFFCANVAS para todas las peliculas,las encuentra segun su data-id en el JSON-->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header" style="display: flex; flex-direction: column; justify-content: center;">
+                  <h1 id="offcanvasRightLabel"></h1>
+                  <br>
+                  <h5 id="offCanvasGenre"></h5>
+                  
+              </div>
+              <div class="offcanvas-body">
+                  <img id="offcanvasImage" src="" alt="" style="width: 100%; height: auto; margin-bottom: 15px;">
+                  
+                  <h5 id="offcanvasDescription"></h5>
+                  <br>
+                  <h5>Disponible en: <h5 id="plataformas"></h5></h5>
+                  
+              </div>
+          </div>
+
+         
+                <!--PROXIMAS NOMINACIONES, DIV2-->
+        <br>
+        <br>
+           
+        <h1 class="text-center mb-5 mt-5" style="font-size: 60px;"> Proximas nominaciones</h1>
+        <br>
+        <br>
+            <div class="container destacadas  mb-5" id="cartasProximosEstrenos">
+              
+              <div class="card proximosEstrenos">
+                <img src="sing.jpg" class="card-img-top" alt="...">
+                <div class="card-body" style="display: flex; flex-direction: column; margin-top: 35px; gap: 34px;">
+                  <h2 class="card-title">Sing Sing</h2>
+                  <a href="https://www.youtube.com/watch?v=j3dXc6P3zH8" style="text-decoration: none; color: inherit;"> <button type="button" class="btn btn-custom-vertrailer">
+                    Trailer <i class="bi bi-play-fill"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card proximosEstrenos">
+                <img src="killer.jpg" class="card-img-top" alt="...">
+                <div class="card-body" style="display: flex; flex-direction: column; margin-top: 35px; gap: 34px;">
+                  <h2 class="card-title">Killer</h2>
+                  <a href="https://youtu.be/zgNOS5ofQhw?si=sK2Q0I3PhLfRFB3p" style="text-decoration: none; color: inherit;"> <button type="button" class="btn btn-custom-vertrailer">
+                    Trailer <i class="bi bi-play-fill"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+
+              <div class="card proximosEstrenos">
+                <img src="napoleon.jpg" class="card-img-top" alt="...">
+                <div class="card-body" style="display: flex; flex-direction: column; margin-top: 35px; gap: 34px;">
+                  <h2 class="card-title">Napoleon</h2>
+                  <a href="https://youtu.be/NjMJwewmcfA?si=nXDMIG-CZHnbCJQa" style="text-decoration: none; color: inherit;"> <button type="button" class="btn btn-custom-vertrailer">
+                    Trailer <i class="bi bi-play-fill"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+
+              <div class="card proximosEstrenos">
+                <img src="dune.jpeg" class="card-img-top" alt="...">
+                <div class="card-body" style="display: flex; flex-direction: column; margin-top: 35px; gap: 34px;">
+                  <h2 class="card-title">Dune</h2>
+                  <a href="https://www.youtube.com/watch?v=U2Qp5pL3ovA" style="text-decoration: none; color: inherit;"> <button type="button" class="btn btn-custom-vertrailer">
+                    Trailer <i class="bi bi-play-fill"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+
+              <div class="card proximosEstrenos">
+                <img src="conc.webp" class="card-img-top" alt="...">
+                <div class="card-body" style="display: flex; flex-direction: column; margin-top: 35px; gap: 34px;">
+                  <h2 class="card-title">Conclave</h2>
+                  <a href="https://youtu.be/JX9jasdi3ic?si=dNGHRiQpOu8mKAle" style="text-decoration: none; color: inherit;"> <button type="button" class="btn btn-custom-vertrailer">
+                    Trailer <i class="bi bi-play-fill"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="card proximosEstrenos">
+                <img src="brut.webp" class="card-img-top" alt="...">
+                <div class="card-body" style="display: flex; flex-direction: column; margin-top: 35px; gap: 34px;">
+                  <h2 class="card-title">The Brutalist</h2>
+                  <a href="https://youtu.be/6d7yU379Ur0?si=Il1pHhCiqIFfwvVY" style="text-decoration: none; color: inherit;"> <button type="button" class="btn btn-custom-vertrailer">
+                    Trailer <i class="bi bi-play-fill"></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              
+                
+              
+    </div>
+    </div>
+
+    
+
+   
+
+    
+    
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>

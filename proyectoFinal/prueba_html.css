@@ -1,0 +1,232 @@
+
+.poiret-one-regular {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+#tituloCentral{
+    margin-right: 10%;
+}
+
+#divCentral{
+    padding-top: 10%;
+}
+
+.btn-destacadas{
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(7, 95, 178, 0.986);
+    width: 10rem;
+    height: 3rem;
+    margin-right: 20px;
+    color: white;
+    font-size: x-large;
+    
+}
+
+.btn-todas{
+  border-radius: 5px;
+    border: none;
+    background-color:  rgb(26, 25, 25);
+    width: 10rem;
+    height: 3rem;
+    margin-left: 20px;
+    color: white;
+    font-size: x-large;
+
+}
+
+
+
+.links{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* links de las apps en los modals */
+.svg-link {
+  text-decoration: none; 
+}
+
+.svg-link:visited {
+  color: inherit; 
+}
+
+.svg-link:hover svg {
+  opacity: 0.8; 
+}
+
+.textoModalBody{
+  font-size: x-large;
+}
+ /*termina modals*/
+
+#imgTercera{
+  width: 30rem;
+}
+#terceraPagina{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+
+
+/* tabs de los años de las peliculas 2024-2023-clasicas*/
+.tabsPelis{
+  display: flex;
+  gap: 30px;
+}
+
+/* Div donde se ven las peliculas encontradas por el buscador */
+#pelisEncontradas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* barra de busqueda */
+#divBarraBusqueda{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#searchBar{
+  width: 350px;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid white;
+
+}
+
+#searchBar:focus{
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+#searchBar:active{
+  background-color: transparent;
+  color: white;
+}
+
+/* botones inicio*/
+
+#botonesInicio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8%;
+  gap: 10px;
+}
+
+.btn-destacadas, .btn-todas {
+  width: 400px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.btn-todas{
+  background-color: #3F686C;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #2b4749;
+  
+}
+
+.btn-destacadas{
+  background-color: #9A79C6;
+  box-shadow: 0 0 15px #6d568b;
+  border-radius: 20px;
+}
+
+#cartasPelisDestacadas{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 10%;
+  flex-wrap: wrap;
+}
+
+
+#latestNews {
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.news-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-card h3 {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.news-card p {
+  margin: 15px;
+  color: #666;
+}
+
+.news-card a {
+  display: block;
+  margin: 15px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-card a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
