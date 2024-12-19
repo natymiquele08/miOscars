@@ -1,12 +1,7 @@
 
-.poiret-one-regular {
-  font-family: "Poiret One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+html{
+  scroll-behavior: smooth;
 }
-
-
-
 
 #tituloCentral{
     margin-right: 10%;
@@ -17,29 +12,54 @@
 }
 
 .btn-destacadas{
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
-    background-color: rgba(7, 95, 178, 0.986);
+    background-color: #9A79C6;
     width: 10rem;
     height: 3rem;
     margin-right: 20px;
     color: white;
-    font-size: x-large;
+    font-size: 20px;
     
 }
 
+.btn-destacadas:hover{
+  background-color: #8c67bd;
+  transition: ease 0.3s;
+}
+
 .btn-todas{
-  border-radius: 5px;
+    border-radius: 20px;
     border: none;
-    background-color:  rgb(26, 25, 25);
+    background-color:  rgba(107, 105, 105, 0.562);
     width: 10rem;
     height: 3rem;
     margin-left: 20px;
     color: white;
-    font-size: x-large;
+    font-size: 20px;
 
 }
 
+.btn-todas:hover{
+  background-color: rgba(78, 76, 76, 0.562);
+  transition: ease 0.3s;
+}
+
+.btn-destacadas:not(:hover){
+  transition: ease-in-out 0.3s;
+}
+
+.btn-todas:not(:hover){
+  transition: ease-in-out 0.3s;
+}
+
+
+
+.btn-destacadas, .btn-todas {
+  width: 400px;
+  margin: 5px 0;
+  text-align: center;
+}
 
 
 .links{
@@ -101,7 +121,7 @@
 }
 
 #searchBar{
-  width: 350px;
+  width: 500px;
   height: 40px;
   border: none;
   border-radius: 15px;
@@ -134,24 +154,7 @@
   gap: 10px;
 }
 
-.btn-destacadas, .btn-todas {
-  width: 400px;
-  margin: 5px 0;
-  text-align: center;
-}
 
-.btn-todas{
-  background-color: #3F686C;
-  border-radius: 20px;
-  box-shadow: 0 0 15px #2b4749;
-  
-}
-
-.btn-destacadas{
-  background-color: #9A79C6;
-  box-shadow: 0 0 15px #6d568b;
-  border-radius: 20px;
-}
 
 #cartasPelisDestacadas{
   display: flex;
@@ -162,54 +165,76 @@
 }
 
 
-#latestNews {
-  margin: 40px auto;
-  max-width: 1200px;
-  padding: 20px;
+
+#scrollToTop {
+  border-radius: 50%; 
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
   text-align: center;
+  line-height: 30px;
+  background-color: #3F686C;
+  color: white;
 }
 
-.news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+#footer{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 436px;
+  gap: 25px;
+}
+
+.montserrat-alternates-light {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.textoFooter{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "Montserrat Alternates", sans-serif;
+
+}
+
+.formFooter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
-.news-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
+.inputFooter{
+  width: 409px;
+  border-radius: 20px;
+  height: 47px;
+  background-color: transparent;
+  border: 2px solid #2b4749;
+  padding-left: 20px;
+  color: white;
 }
 
-.news-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+.btnEnviarFooter{
+  width: 238px;
+  height: 51px;
+  background-color: #2b4749;
+  border-radius: 20px;
+  border: none;
+  color: white;
 }
 
-.news-card h3 {
-  margin: 15px;
-  font-size: 20px;
+.btnEnviarFooter:hover{
+  background-color: #395d5f;
+  transition: ease-in 0.3s;
 }
 
-.news-card p {
-  margin: 15px;
-  color: #666;
-}
-
-.news-card a {
-  display: block;
-  margin: 15px;
-  color: #007BFF;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.news-card a:hover {
-  text-decoration: underline;
+.btnEnviarFooter:not(:hover){
+  transition: ease-out 0.3s;
 }
 
 

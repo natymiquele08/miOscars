@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blend Mode Exercise</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #63535b;
+  
+}
+ 
+.card-container {
+  content-visibility: auto; /* Optimización */
+  width:90%;
+  max-width: 400px;
+}
+ 
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  mix-blend-mode: multiply;
+}
+
+.content{
+    background-color: #fcd0a1;
+}
+
+.content h1{
+    color: #53917e;
+}
+
+.content button{
+    border: none;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    background-color: #b1b695;
+}
+
+</style>
+<body>
+<main class="card-container">
+<section class="profile-card">
+    <div class="image-container">
+    <img src="FjU2lkcWYAgNG6d.jpg" alt="Profile Image">
+    </div>
+    <div class="content">
+    <h1>John Doe</h1>
+    <p>Web Developer & Designer</p>
+    <button>Contact</button>
+    </div>
+</section>
+</main>
+</body>

@@ -1,0 +1,41 @@
+.galeria{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#original{
+    width: 500px;
+}
+#img1, #img2, #img3{
+    width: 400px;
+}
+
+
+#img1{
+    filter: blur(5px);
+}
+
+#img2{
+    filter: grayscale(80%);
+}
+
+#img3:hover{
+    filter: drop-shadow(10px 10px 10px rgb(236, 146, 28)) hue-rotate(30deg);
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+
+#img3:not(:hover){
+    transition: ease-out 0.3s;
+}

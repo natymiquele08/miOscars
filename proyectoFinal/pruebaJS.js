@@ -1,3 +1,62 @@
+//FUNCION PARA CARGAR DEL JSON LAS PELICULAS PARA EL OFFCANVAS
+document.addEventListener('DOMContentLoaded', function () {
+    // Cargar el archivo JSON de películas
+    fetch('peliculas.json')
+        .then(response => response.json())
+        .then(data => {
+            // Evento para cada botón "Ver más"
+            document.querySelectorAll('.btn-canvas').forEach(button => {
+                button.addEventListener('click', function () {
+                    // Obtener el id de la tarjeta seleccionada
+                    const cardId = this.closest('.card').getAttribute('data-id');
+                    
+                    // Buscar la película en el JSON usando el id
+                    const pelicula = data.find(item => item.id === cardId);
+                    
+                    if (pelicula) {
+                        // Actualizar el contenido del offcanvas con los datos de la película
+                        document.getElementById('offcanvasRightLabel').textContent = pelicula.titulo;
+                        document.getElementById('offCanvasGenre').textContent = pelicula.genre;
+                        document.getElementById('offcanvasImage').src = pelicula.imagen;
+                        document.getElementById('offcanvasImage').alt = pelicula.titulo;
+                        document.getElementById('offcanvasDescription').textContent = pelicula.descripcion;
+                        document.getElementById('plataformas').textContent=pelicula.plataformas;
+                        
+                    
+                    }
+                });
+            });
+        })
+        .catch(error => console.error('Error al cargar el JSON:', error));
+});
+
+
+
+//FUNCION PARA QUE APAREZCA UNA FLECHA QUE LLEVE HACIA ARRIBA DEL TODO
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollToTopButton = document.getElementById('scrollToTop');
+
+    // Muestra/oculta el botón al hacer scroll
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
+    });
+
+    // Función para volver al inicio
+    scrollToTopButton.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+
 
 //FUNCION DE BUSCADOR DE PELICULAS.
 function searchMovies() {
@@ -44,37 +103,6 @@ function searchMovies() {
 
 }
 
-//FUNCION PARA CARGAR DEL JSON LAS PELICULAS PARA EL OFFCANVAS
-document.addEventListener('DOMContentLoaded', function () {
-    // Cargar el archivo JSON de películas
-    fetch('peliculas.json')
-        .then(response => response.json())
-        .then(data => {
-            // Evento para cada botón "Ver más"
-            document.querySelectorAll('.btn-canvas').forEach(button => {
-                button.addEventListener('click', function () {
-                    // Obtener el id de la tarjeta seleccionada
-                    const cardId = this.closest('.card').getAttribute('data-id');
-                    
-                    // Buscar la película en el JSON usando el id
-                    const pelicula = data.find(item => item.id === cardId);
-                    
-                    if (pelicula) {
-                        // Actualizar el contenido del offcanvas con los datos de la película
-                        document.getElementById('offcanvasRightLabel').textContent = pelicula.titulo;
-                        document.getElementById('offCanvasGenre').textContent = pelicula.genre;
-                        document.getElementById('offcanvasImage').src = pelicula.imagen;
-                        document.getElementById('offcanvasImage').alt = pelicula.titulo;
-                        document.getElementById('offcanvasDescription').textContent = pelicula.descripcion;
-                        document.getElementById('plataformas').textContent=pelicula.plataformas;
-                        
-                    
-                    }
-                });
-            });
-        })
-        .catch(error => console.error('Error al cargar el JSON:', error));
-});
 
 
 

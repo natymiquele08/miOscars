@@ -4,7 +4,7 @@
       "titulo": "Vidas Pasadas",
       "descripcion": "Nora y Hae Sung, dos amigos de la infancia con una fuerte conexión, se separaron cuando la familia de Nora, que entonces tenía solo 10 años, emigró desde Corea del Sur a Canadá. Muchos años después, cuando Nora trabaja como escritora de teatro en Nueva York, ambos se reencuentran, y pasarán juntos unos días que les enfrentará al amor, al destino y a las elecciones que componen una vida.",
       "imagen": "MCDPALI_EC047_H.webp",
-      "plataformas": "Netflix - MAX",
+      "plataformas": "Netflix -  MAX",
       "genre": "Drama, Romance"
     },
     {
@@ -12,7 +12,7 @@
       "titulo": "Asesinos de Luna",
       "descripcion": "Una emocionante historia que mezcla drama y suspenso, basada en los eventos reales de los asesinatos en la Nación Osage, donde el petróleo desató una ola de codicia y crímenes en los años 20.",
       "imagen": "asesinos.jpg",
-      "plataformas": ["Disney+", "Amazon Prime"],
+      "plataformas": ["Disney+ - Amazon Prime"],
       "genre": "Drama, Suspenso, Historico"
     },
     {
@@ -20,7 +20,7 @@
         "titulo": "Maestro",
         "descripcion": "Un retrato íntimo de la vida y la carrera de Leonard Bernstein, uno de los compositores más influyentes del siglo XX, explorando sus logros y relaciones personales.",
         "imagen": "maestro.jpeg",
-        "plataformas": ["Netflix", "HBO"],
+        "plataformas": ["Netflix - HBO"],
         "genre": "Drama, Biografia, Musical"
       },
       {
@@ -28,7 +28,7 @@
         "titulo": "American Fiction",
         "descripcion": "Una sátira que explora los estereotipos y clichés culturales, cuando un autor afroamericano se burla del mercado literario escribiendo una novela irónica que se convierte en un éxito inesperado.",
         "imagen": "american.webp",
-        "plataformas": ["Netflix", "HBO"],
+        "plataformas": ["Netflix - Disney+"],
         "genre": "Comedia, Satira, Drama"
       },
       {
@@ -36,7 +36,7 @@
         "titulo": "Elvis",
         "descripcion": "La vida y carrera de Elvis Presley contada a través de los ojos de su complejo manager, explorando su ascenso al estrellato y su impacto cultural en el mundo de la música.",
         "imagen": "elvis.webp",
-        "plataformas": ["Netflix", "HBO"],
+        "plataformas": ["Disney+ - HBO"],
         "genre": "Biografia, Drama, Musical"
       },
       {
@@ -44,7 +44,7 @@
         "titulo": "Avatar",
         "descripcion": "Un exmarine viaja al exótico planeta Pandora, donde se ve inmerso en el conflicto entre los nativos Na'vi y una corporación que busca explotar sus recursos naturales.",
         "imagen": "5c1ccacb8730b-wallpaper-preview.jpg",
-        "plataformas": ["Netflix", "HBO"],
+        "plataformas": ["Netflix - HBO - Disney+"],
         "genre": "Ciencia Ficcion, Aventura, Accion"
       },
       {
@@ -52,7 +52,7 @@
         "titulo": "Tar",
         "descripcion": "La historia de una renombrada directora de orquesta, Lydia Tár, mientras enfrenta desafíos personales y profesionales que amenazan con destruir su carrera.",
         "imagen": "tar.webp",
-        "plataformas": ["Netflix", "HBO"],
+        "plataformas": ["Netflix - HBO"],
         "genre": "Drama, Musica"
       },
       {
@@ -60,7 +60,7 @@
         "titulo": "Top Gun",
         "descripcion": "El legendario piloto Pete Maverick Mitchell regresa para entrenar a una nueva generación de pilotos, enfrentando su propio legado y un futuro incierto.",
         "imagen": "topgun.webp",
-        "plataformas": ["Netflix", "HBO"],
+        "plataformas": ["HBO"],
         "genre": "Accion, Drama, Aventura"
       },
       {
@@ -68,7 +68,7 @@
         "titulo": "Mary Poppins",
         "descripcion": "La mágica niñera Mary Poppins regresa para ayudar a una nueva generación de la familia Banks, trayendo lecciones de vida y esperanza en tiempos difíciles.",
         "imagen": "mary.jpg",
-        "plataformas": ["Netflix", "HBO"],
+        "plataformas": ["Disney+"],
         "genre": "Fantasia, Romance, Drama"
       },
       {
@@ -76,7 +76,7 @@
         "titulo": "Chicago",
         "descripcion": "Dos mujeres acusadas de asesinato luchan por la fama y la fortuna en la escena del cabaret de Chicago, usando el sistema judicial como un espectáculo mediático.",
         "imagen": "chicago.jpg",
-        "plataformas": ["Netflix", "HBO"],
+        "plataformas": ["Netflix - HBO"],
         "genre": "Musical, Drama, Crimen"
       },
       {
@@ -84,7 +84,7 @@
         "titulo": "La forma del agua",
         "descripcion": "Un conmovedor cuento de amor entre una mujer muda que trabaja en un laboratorio secreto del gobierno y una criatura anfibia capturada durante la Guerra Fría.",
         "imagen": "formadelagua.jpg",
-        "plataformas": ["Netflix", "HBO"],
+        "plataformas": ["Netflix - HBO"],
         "genre": "Fantasia, Romance, Drama"
       },
       {
@@ -92,9 +92,43 @@
         "titulo": "El curioso caso de Benjamin Button",
         "descripcion": "La fascinante vida de Benjamin Button, un hombre que nace con la apariencia de un anciano y envejece al revés, explorando temas de amor, pérdida y el paso del tiempo.",
         "imagen": "benjamin.jpg",
-        "plataformas": ["Netflix", "HBO"],
+        "plataformas": ["Netflix - HBO"],
         "genre": "Drama,Fantasia, Romance"
+      },
+      {
+        "id": "alien",
+        "titulo": "Alien",
+        "descripcion": "La tripulación del remolcador espacial Nostromo atiende una señal de socorro y, sin saberlo, sube a bordo una letal forma de vida extraterrestre.",
+        "imagen": "aliens-alien-movie-sigourney-weaver-ellen-ripley-wallpaper-preview.jpg",
+        "plataformas": ["Netflix - Amazon - Disney+"],
+        "genre": "Ciencia ficción, Terror, Suspenso"
+      },
+      {
+        "id": "barbie",
+        "titulo": "Barbie",
+        "descripcion": "Después de ser expulsada de Barbieland por no ser una muñeca de aspecto perfecto, Barbie parte hacia el mundo humano para encontrar la verdadera felicidad.",
+        "imagen": "barbie.jpeg",
+        "plataformas": ["HBO"],
+        "genre": "Comedia, Fantasía, Aventura"
+      },
+      {
+        "id": "oppen",
+        "titulo": "Oppenheimer",
+        "descripcion": "Durante la Segunda Guerra Mundial, el teniente general Leslie Groves designa al físico J. Robert Oppenheimer para un grupo de trabajo que está desarrollando el Proyecto Manhattan, cuyo objetivo consiste en fabricar la primera bomba atómica.",
+        "imagen": "oppen.jpg",
+        "plataformas": ["Netflix - HBO"],
+        "genre": " Drama histórico, Biografía"
+      },
+      {
+        "id": "poor",
+        "titulo": "Poor Things",
+        "descripcion": "Bella Baxter, una joven devuelta a la vida por el excéntrico Dr. Godwin Baxter, emprende un viaje de autodescubrimiento y libertad, desafiando las normas sociales en un mundo surrealista.",
+        "imagen": "benjamin.jpg",
+        "plataformas": ["Disney+ - HBO"],
+        "genre": "Ciencia ficción, drama, comedia negra, romance"
       }
+
+
 
 
   ]
